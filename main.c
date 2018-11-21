@@ -106,7 +106,7 @@ int main (int ac, char **av)
 			element->start_time = 0;
 			element->end_time = 0;
 		}
-		splitted = strtok(av[index], "::");
+		splitted = strtok(av[index], ":");
 		element->id = splitted;
 		if (atoi(av[index]) < 0)
 		{
@@ -118,7 +118,6 @@ int main (int ac, char **av)
 		{
 			final_start = element->start_time;
 		}
-		printf("%s, %d", element->id, element->start_time);
 		element = element->next;
 
 		index++;
